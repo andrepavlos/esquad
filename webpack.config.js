@@ -27,7 +27,7 @@ module.exports = {
     extensions: [".jsx", ".js"],
     modules: ["node_modules", SRC]
   },
-  entry: "./app",
+  entry: "./index",
   output: {
     path: DIST,
     publicPath: "/"
@@ -55,7 +55,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlPlugin({ template: "./app.html" }),
+    new HtmlPlugin({ template: "./index.html" }),
     new DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(NODE_ENV),
       IS_DEV: JSON.stringify(IS_DEV)

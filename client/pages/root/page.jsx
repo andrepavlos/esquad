@@ -1,3 +1,10 @@
 import React from "react";
+import { Button } from "ui";
 
-export const RootPage = () => <div className="root-page">HOME</div>;
+const Page = () => (
+  <div className="root-page">
+    <Button>ME</Button>
+  </div>
+);
+
+export default Page;

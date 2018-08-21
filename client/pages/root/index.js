@@ -1,2 +1,2 @@
-export * from "./page";
-export * from "./route";
+export { default as RootPage } from "./page";
+export { default as RootRoute } from "./route";

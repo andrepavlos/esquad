@@ -1,5 +1,5 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { RootPage } from "./page";
+import Page from "./page";
 
-export const RootRoute = <Route exact path="/" component={RootPage} />;
+export default <Route exact path="/" component={Page} />;

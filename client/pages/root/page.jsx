@@ -1,10 +1,6 @@
 import React from "react";
-import { Button } from "ui";
+import { Button, CommonTemplate } from "ui";
 
-const Page = () => (
-  <div className="root-page">
-    <Button>ME</Button>
-  </div>
-);
+const Page = () => <CommonTemplate />;
 
 export default Page;

@@ -1,18 +1,20 @@
 import "styles";
 import React from "react";
 import { render } from "react-dom";
-import { Provider } from "react-redux";
-import { configure as configureStore } from "store";
+import { Provider as ReduxProvider } from "react-redux";
+import { ThemeProvider } from "styled-components";
+import { history, configure as configureStore } from "store";
 import { Router } from "router";
-import { Logo } from "ui/outlines/logo";
+import { theme } from "ui";
+
+const store = configureStore();
 
 const App = () => (
-  <Provider store={configureStore()}>
-    <>
-      <Logo />
-      <Router />
-    </>
-  </Provider>
+  <ReduxProvider store={store}>
+    <ThemeProvider theme={theme}>
+      <Router history={history} />
+    </ThemeProvider>
+  </ReduxProvider>
 );
 
 render(<App />, document.getElementById("app"));

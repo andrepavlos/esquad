@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, CommonTemplate } from "ui";
+import { CommonTemplate } from "ui";
+import { NewsFeed } from "features/news-feed";
 
-const Page = () => <CommonTemplate />;
+const Page = () => <CommonTemplate main={NewsFeed} sidebar={true} />;
 
 export default Page;

@@ -1,2 +1,2 @@
 export * from "./duck";
-export * from "./authentication";
+export * from "./containers/authentication";

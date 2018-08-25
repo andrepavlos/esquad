@@ -1,5 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import discord from "./discord.svg";
+import _Discord from "./discord.svg";
 
-export const Discord = styled(props => <img {...props} src={discord} />)``;
+export const Discord = styled(_Discord)`
+  fill: ${p => p.theme.text};
+`;

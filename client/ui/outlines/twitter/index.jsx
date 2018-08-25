@@ -1,5 +1,10 @@
-import React from "react";
 import styled from "styled-components";
-import twitter from "./twitter.svg";
+import _Twitter from "./twitter.svg";
 
-export const Twitter = styled(props => <img {...props} src={twitter} />)``;
+export const Twitter = styled(_Twitter)`
+  fill: transparent;
+
+  .cls-2 {
+    fill: ${p => p.theme.text};
+  }
+`;

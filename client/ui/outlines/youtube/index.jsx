@@ -1,5 +1,8 @@
-import React from "react";
 import styled from "styled-components";
-import youtube from "./youtube.png";
+import _Youtube from "./youtube.svg";
 
-export const Youtube = styled(props => <img {...props} src={youtube} />)``;
+export const Youtube = styled(_Youtube)`
+  & path {
+    fill: ${p => p.theme.text};
+  }
+`;

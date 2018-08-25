@@ -46,11 +46,16 @@ module.exports = {
       },
 
       {
-        test: /\.(jpg|png|svg)$/,
+        test: /\.(jpg|png)$/,
         loader: "file-loader",
         options: {
           name: "assets/[name].[ext]"
         }
+      },
+
+      {
+        test: /\.svg$/,
+        loader: "react-svg-loader"
       }
     ]
   },

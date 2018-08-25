@@ -1,15 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import { Article } from "../components/article";
+import {Logo as _Logo} from 'ui'
+import ReactDOMServer from 'react-dom/server';
 
 const Body = styled.div`
   box-shadow: 0 3px 5px #2d2d2d;
 `;
 
-const content = `<h1>Hello world</h1><img src="http://thedesignspace.net/MT2archives/images/css/cssHeight3-thumb.jpg" />
-oki bro i understand you <i>okay</i> <a href="/">this is link</a>
+const Logo = styled(_Logo)`
+  display: block;
+  margin: 0 auto;
+`
 
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, suscipit minus dolor omnis repudiandae autem? Beatae quidem veritatis vel repellendus sint! Ut sint vero debitis magni rerum quasi at non?
+const content = `${ReactDOMServer.renderToStaticMarkup(<Logo />)}
+Hi there, <i>stranger</i>. This is a <a href="https://en.wikipedia.org/wiki/Content_management_system">Content Management System</a>, specially created for small cybersport teams that do not want to spend their time for configuring web stuff.
+
+It's under heavy development and not stable.
 `.trim();
 
 class NewsFeed extends React.Component {
@@ -20,21 +27,6 @@ class NewsFeed extends React.Component {
           <Article
             title="Lorem ipsum dolor sit amet"
             tags={["common"]}
-            content={content}
-          />
-          <Article
-            title="consectetur adipisicing elit. F"
-            tags={["common"]}
-            content={content}
-          />
-          <Article
-            title="uga modi quas aspernatur libero dolor, perferendis"
-            tags={["common"]}
-            content={content}
-          />
-          <Article
-            title="itaque similique voluptatibus"
-            tags={["common", "clan wars"]}
             content={content}
           />
         </Body>

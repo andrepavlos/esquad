@@ -12,9 +12,12 @@ injectGlobal`
     font-size: 10px;
   }
 
-  body {
+  body, pre {
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
     font-size: 1.6rem;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 `;

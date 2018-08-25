@@ -6,8 +6,9 @@ import { ButtonJoin } from "features/join";
 import { ButtonCw, LatestCws } from "features/cw";
 import { Alert } from "features/notification";
 import { PlayServers } from "features/monitoring";
-import { NavBar, SocialBar } from "../molecules";
+import { NavBar, SocialBar, Footer } from "../molecules";
 import { Logo } from "../outlines";
+import { About } from "../atoms";
 
 const Body = styled.div`
   min-height: 100vh;
@@ -43,9 +44,11 @@ const Content = styled.div`
   padding-top: 2rem;
 `;
 
+const AboutContainer = styled(Content)``;
+
 const Main = styled.main`
   width: 100%;
-  padding-right: 2rem;
+  padding-right: ${p => (p.sidebar ? "2rem" : "auto")};
 `;
 
 const Sidebar = styled.div`
@@ -82,7 +85,7 @@ const CommonTemplate = props => (
       <NavBar />
 
       <Content>
-        <Main>
+        <Main sidebar={props.sidebar}>
           <Alert rounded />
           <props.main />
         </Main>
@@ -99,14 +102,26 @@ const CommonTemplate = props => (
         )}
       </Content>
 
-      {props.children}
+      {props.about && (
+        <AboutContainer>
+          {" "}
+          <About>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            aspernatur maxime a ipsam eaque error quis omnis nesciunt, unde
+            voluptatum, soluta hic pariatur exercitationem vel sed qui dolores
+            inventore velit!
+          </About>
+        </AboutContainer>
+      )}
+      <Footer />
     </Container>
   </Body>
 );
 
 CommonTemplate.propTypes = {
   main: PropTypes.func,
-  sidebar: PropTypes.bool
+  sidebar: PropTypes.bool,
+  about: PropTypes.bool
 };
 
 export { CommonTemplate };

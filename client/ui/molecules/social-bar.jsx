@@ -6,15 +6,15 @@ import { Discord, Youtube, Twitter } from "../outlines";
 export const SocialBar = styled(props => (
   <div className={props.className}>
     <Link external to="/">
-      <Discord />
+      <Discord width="40" />
     </Link>
 
     <Link external to="/">
-      <Youtube />
+      <Youtube width="40" />
     </Link>
 
     <Link external to="/">
-      <Twitter />
+      <Twitter width="40" />
     </Link>
   </div>
 ))`

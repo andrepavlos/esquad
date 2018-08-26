@@ -133,7 +133,7 @@ const CommonTemplate = props => (
 );
 
 CommonTemplate.propTypes = {
-  main: PropTypes.func,
+  main: PropTypes.func.isRequired,
   sidebar: PropTypes.bool,
   about: PropTypes.bool
 };

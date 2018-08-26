@@ -54,7 +54,6 @@ const ButtonCopy = styled.div`
 
 class PlayServers extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <Body>
         <Header>Game Servers</Header>

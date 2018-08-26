@@ -33,7 +33,6 @@ const Badge = styled.div`
 
 class LatestCws extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <Body>
         <Header>latest clan wars</Header>

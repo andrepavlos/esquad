@@ -25,7 +25,7 @@ module.exports = {
   context: SRC,
   resolve: {
     extensions: [".jsx", ".js"],
-    modules: ["node_modules", SRC]
+    alias: { "@": SRC }
   },
   entry: "./index",
   output: {

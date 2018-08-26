@@ -21,4 +21,16 @@ injectGlobal`
   body {
     overflow-x: hidden;
   }
+
+  body::-webkit-scrollbar {
+    width: 0.9rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: ${theme.dark};
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: ${theme.accent};
+  }
 `;

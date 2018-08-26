@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Authentication } from "features/authentication";
-import { ButtonJoin } from "features/join";
-import { ButtonCw, LatestCws } from "features/cw";
-import { Alert } from "features/notification";
-import { PlayServers } from "features/monitoring";
+import { Authentication } from "@/features/authentication";
+import { Register } from "@/features/register";
+import { JoinRequest } from "@/features/join";
+import { CwRequest, LatestCws } from "@/features/cw";
+import { Alert } from "@/features/notification";
+import { PlayServers } from "@/features/monitoring";
 import { NavBar, SocialBar, Footer } from "../molecules";
 import { Logo } from "../outlines";
 import { About } from "../atoms";

@@ -1,11 +1,11 @@
-import "styles";
+import "@/styles";
 import React from "react";
 import { render } from "react-dom";
 import { Provider as ReduxProvider } from "react-redux";
 import { ThemeProvider } from "styled-components";
-import { history, configure as configureStore } from "store";
-import { Router } from "router";
-import { theme } from "ui";
+import { history, configure as configureStore } from "@/store";
+import { Router } from "@/router";
+import { theme } from "@/ui";
 
 const store = configureStore();
 

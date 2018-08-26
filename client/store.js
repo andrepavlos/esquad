@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
-import { reducer as authentication } from "features/authentication";
+import { reducer as authentication } from "@/features/authentication";
 import { createBrowserHistory } from "history";
 import { connectRouter, routerMiddleware } from "connected-react-router";
 

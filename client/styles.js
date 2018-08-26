@@ -1,5 +1,6 @@
 import "normalize.css";
 import { injectGlobal } from "styled-components";
+import { theme } from "@/ui";
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');

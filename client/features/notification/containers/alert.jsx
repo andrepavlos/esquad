@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Danger as _Danger } from "ui";
+import { Danger as _Danger } from "@/ui";
 
 const Danger = styled(_Danger)`
   width: 4.8rem;

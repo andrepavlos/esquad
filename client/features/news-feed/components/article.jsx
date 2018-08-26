@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Eye as _Eye } from "ui";
+import { Eye as _Eye } from "@/ui";
 
 const Eye = styled(_Eye)`
   fill: ${p => p.theme.accent};

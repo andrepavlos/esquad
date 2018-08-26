@@ -126,7 +126,7 @@ const CommonTemplate = props => (
         </Content>
 
         {props.about && <AboutContainer />}
-        <Footer />
+        <Footer collapsed={props.about} />
       </Body>
     </Container>
   </Shell>

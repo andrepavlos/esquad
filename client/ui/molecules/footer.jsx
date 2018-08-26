@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 const styles = css`
   padding: 2rem;
+  margin-top: ${p => (p.collapsed ? "auto" : "2rem")};
   background-color: ${p => p.theme.dark};
   display: flex;
   justify-content: space-between;

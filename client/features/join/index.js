@@ -1,1 +1,1 @@
-export * from "./components/button-join";
+export * from "./containers/join-request";

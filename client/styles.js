@@ -33,4 +33,8 @@ injectGlobal`
   body::-webkit-scrollbar-thumb {
     background-color: ${theme.accent};
   }
+
+  .hide-scroll {
+    overflow-y: hidden;
+  }
 `;

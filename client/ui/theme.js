@@ -1,8 +1,8 @@
 import color from "tinycolor2";
 
 let theme = {
-  dark: "#333333",
-  accent: "#ffcc00",
+  dark: "#333",
+  accent: "#fc0",
   text: "#eee"
 };
 

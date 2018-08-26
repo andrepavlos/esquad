@@ -11,7 +11,7 @@ import { NavBar, SocialBar, Footer } from "../molecules";
 import { Logo } from "../outlines";
 import { About } from "../atoms";
 
-const Body = styled.div`
+const Shell = styled.div`
   min-height: 100vh;
   background-color: ${p => p.theme.dark};
   display: flex;
@@ -22,8 +22,9 @@ const Body = styled.div`
 const Container = styled.section`
   max-width: 96rem;
   width: 100%;
-  box-shadow: 0 2.5rem 1rem #252525;
+  box-shadow: 0 2.5rem 1rem #292929;
   background-color: ${p => p.theme.darkDarken};
+  overflow: hidden;
 `;
 
 const Header = styled.header`
@@ -38,14 +39,16 @@ const Header = styled.header`
   }
 `;
 
-const Content = styled.div`
-  display: flex;
+const Body = styled.div`
   border-left: 0.1rem solid ${p => p.theme.darkLighten};
   border-right: 0.1rem solid ${p => p.theme.darkLighten};
-  padding-top: 2rem;
 `;
 
-const AboutContainer = styled(Content)``;
+const Content = styled.div`
+  display: flex;
+  padding-top: 2rem;
+  overflow-x: hidden;
+`;
 
 const Main = styled.main`
   width: 100%;
@@ -65,6 +68,18 @@ const Sidebar = styled.div`
   }
 `;
 
+const SidebarContainer = p => (
+  <Sidebar>
+    <SidebarButtons>
+      <CwRequest />
+      <JoinRequest />
+    </SidebarButtons>
+
+    <LatestCws />
+    <PlayServers />
+  </Sidebar>
+);
+
 const SidebarButtons = styled.div`
   & > * {
     margin-top: 0.5rem;
@@ -75,48 +90,46 @@ const SidebarButtons = styled.div`
   }
 `;
 
+const AboutContainer = styled(p => (
+  <div className={p.className}>
+    <About>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur
+      maxime a ipsam eaque error quis omnis nesciunt, unde voluptatum, soluta
+      hic pariatur exercitationem vel sed qui dolores inventore velit!
+    </About>
+  </div>
+))`
+  padding-top: 2rem;
+  overflow-x: hidden;
+`;
+
 const CommonTemplate = props => (
-  <Body>
+  <Shell>
     <Container>
       <Header>
         <Logo />
         <SocialBar />
         <Authentication />
+        <Register />
       </Header>
+
       <NavBar />
 
-      <Content>
-        <Main sidebar={props.sidebar}>
-          <Alert rounded />
-          <props.main />
-        </Main>
-        {props.sidebar && (
-          <Sidebar>
-            <SidebarButtons>
-              <ButtonCw />
-              <ButtonJoin />
-            </SidebarButtons>
+      <Body>
+        <Content>
+          <Main sidebar={props.sidebar}>
+            <Alert rounded />
+            <props.main />
+          </Main>
 
-            <LatestCws />
-            <PlayServers />
-          </Sidebar>
-        )}
-      </Content>
+          {props.sidebar && <SidebarContainer />}
+        </Content>
 
-      {props.about && (
-        <AboutContainer>
-          {" "}
-          <About>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            aspernatur maxime a ipsam eaque error quis omnis nesciunt, unde
-            voluptatum, soluta hic pariatur exercitationem vel sed qui dolores
-            inventore velit!
-          </About>
-        </AboutContainer>
-      )}
-      <Footer />
+        {props.about && <AboutContainer />}
+        <Footer />
+      </Body>
     </Container>
-  </Body>
+  </Shell>
 );
 
 CommonTemplate.propTypes = {
